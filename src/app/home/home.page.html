@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <br><br><br><br>
+  <!-- main div -->
+  <div id="container">
+    <!-- lining and spacing -->
+    <br><br><br><br><br><br>
+    <strong>Welcome to my App!<br>
+      ______________</strong><br><br><br>
+
+
+    <!-- button will bring you to "Canada" page -->
+    <ion-button [routerLink]="['/canada']">
+      Canadian Animals
+    </ion-button>
+    <br>
+
+    <!-- button will bring you to "America" page -->
+    <ion-button [routerLink]="['/america']">
+      American Animals
+    </ion-button>
+    <br>
+
+    <!-- button will bring you to "Australia" page -->
+    <ion-button [routerLink]="['/australia']">
+      Australian Animals
+    </ion-button>
+    <br>
+    <!-- this is the method that pops up and allows you to rate the app
+        then is stored and then could be retreaved  -->
+    <ion-button (click)="CreatePopOver()">Rate Animal Info</ion-button>
+    
+    <br>
+    <!-- clicking the button will use all the methods and turn on the flashlight -->
+    <ion-button (click)="flashOn()">Flashlight</ion-button>
+    
+    <br>
+    <!-- Clixking the button will bring you to the movies API. I was planning on doing a weather api and thats why its under weather.--> -->
+    <ion-button [routerLink]="['/movies']">Movies Page<br>API</ion-button>
+    <br>
+
+  </div>
+</ion-content>

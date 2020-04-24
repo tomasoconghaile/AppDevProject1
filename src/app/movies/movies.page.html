@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- back button -->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- search bar that will show relevant movies with the word you type -->
+  <ion-searchbar [(ngModel)]="searchTitle" (click)="searchFor()"></ion-searchbar>
+  <br>
+  <!-- inside this card it take the api from external http and reads the data to output on screen -->
+  <!-- ion-card stores all that data and outputs well structured look of the application -->
+  <ion-card *ngFor="let movies of MoviesData">
+    <!-- takes the image and outputs it on screen for every movie -->
+    <img src="{{movies.Poster}}" />
+    <ion-card-header>
+      <ion-card-subtitle>Title</ion-card-subtitle>
+      <!-- reads the title of the movie and outputs on screen with the correct title -->
+      <ion-card-title>{{movies.Title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- outputs the year of the movie -->
+      {{movies.Year}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
